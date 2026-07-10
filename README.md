@@ -3,7 +3,7 @@ Proyecto del curso Deep Neural Networks
 UAV Autonomous Navigation & Obstacle Avoidance via Deep Reinforcement Learning (DRL) and Curriculum Learning
 Este repositorio contiene la implementación completa del sistema de Path Planning autónomo y evasión de obstáculos en entornos interiores para el dron DJI Mavic 2 PRO en el simulador físico Webots.
 
-El proyecto hereda y adapta la formulación de Curriculum Learning propuesta por Park, Jang & Shin (ICCAS 2021). Para mitigar la brecha de control físico en Webots (que requiere comandos individuales de velocidad angular para las 4 hélices en lugar de comandos de velocidad abstractos), diseñamos un low-level flight controller híbrido que ejecuta un lazo de control de actitud PID acoplado directamente con las decisiones de navegación tomadas por las policies de alto nivel de Deep Reinforcement Learning (DRL).
+El proyecto hereda y adapta la formulación de Curriculum Learning propuesta por Park, Jang & Shin. Para mitigar la brecha de control físico en Webots (que requiere comandos individuales de velocidad angular para las 4 hélices en lugar de comandos de velocidad abstractos), diseñamos un low-level flight controller híbrido que ejecuta un lazo de control de actitud PID acoplado directamente con las decisiones de navegación tomadas por las policies de alto nivel de Deep Reinforcement Learning (DRL).
 
 # Arquitectura del Sistema
 El flujo de control y datos se organiza de manera jerárquica:
@@ -37,6 +37,7 @@ venv\Scripts\activate
 
 # 4. Instalar dependencias requeridas
 pip install --upgrade pip
+
 pip install -r requirements.txt
 Contenido de requirements.txt
 gymnasium==0.28.1
